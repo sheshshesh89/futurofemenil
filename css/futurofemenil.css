@@ -1,27 +1,12 @@
 :root {
   --white: white;
+  --color: #46efff;
   --black: black;
 }
 
-.w-embed-youtubevideo {
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/youtube-placeholder.2b05e7d68d.svg');
-  background-position: 50%;
-  background-size: cover;
-  width: 100%;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-}
-
-.w-embed-youtubevideo:empty {
-  min-height: 75px;
-  padding-bottom: 56.25%;
-}
-
 .section {
-  background-color: rgba(255, 255, 255, 0);
-  background-image: linear-gradient(#073b46 54%, rgba(7, 59, 70, 0)), linear-gradient(#073b46, rgba(7, 59, 70, 0));
+  background-color: #fff0;
+  background-image: linear-gradient(#073b46 54%, #073b4600), linear-gradient(#073b46, #073b4600);
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
@@ -73,18 +58,12 @@
   max-width: 25%;
   max-height: 50%;
   position: absolute;
-  top: 5%;
-  bottom: auto;
-  left: 5%;
-  right: auto;
+  inset: 5% auto auto 5%;
 }
 
 .logo {
   position: static;
-  top: auto;
-  bottom: 0%;
-  left: 38%;
-  right: 0%;
+  inset: auto 0% 0% 38%;
 }
 
 .divlogo {
@@ -102,10 +81,7 @@
   max-height: none;
   display: flex;
   position: absolute;
-  top: auto;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: auto 0% 0%;
 }
 
 .paragraph {
@@ -166,7 +142,7 @@
 }
 
 .hero-stack {
-  background-color: rgba(245, 247, 250, 0);
+  background-color: #f5f7fa00;
   border-bottom: 1px #e4ebf3;
   padding: 0 30px 40px;
   position: relative;
@@ -234,10 +210,7 @@
 
 .logo-fut {
   position: static;
-  top: auto;
-  bottom: 0%;
-  left: auto;
-  right: 0%;
+  inset: auto 0% 0% auto;
 }
 
 .div-pasos {
@@ -259,6 +232,12 @@
 
 .youtube {
   height: 100%;
+}
+
+.bold-text {
+  color: var(--color);
+  text-transform: uppercase;
+  font-size: 25px;
 }
 
 @media screen and (max-width: 991px) {
@@ -354,6 +333,7 @@
 
   .h1 {
     font-size: 29px;
+    line-height: 27px;
   }
 
   .js-clock {
@@ -382,6 +362,10 @@
 
   .margin-bottom-24px.paragraph {
     width: 90%;
+  }
+
+  .bold-text {
+    line-height: 29px;
   }
 }
 
